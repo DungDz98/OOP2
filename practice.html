@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    let s = '12:59:59PM';
+    function timeConversion(s) {
+        let str5 = s.substr(8,10);
+        let str2 = s.substr(2,6);
+        let str3 = s.substr(0,2)*1;
+        let str4 = 0;
+        if (str5 == 'PM') {
+            if (str3 == 12) {
+                str4 = str3;
+            } else {
+                str4 = str3 + 12;
+            }
+        } else {
+            str4 = str3;
+        }
+        if (str4 < 10) {
+            return ('0' + str4 + str2);
+        } else {
+            return (str4 + str2);
+        }
+
+    }
+console.log(timeConversion(s));
+
+</script>
+</body>
+</html>
